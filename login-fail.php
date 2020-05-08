@@ -7,17 +7,21 @@ if (isset($_SESSION["fname"])) {
 }
 ?>
 
+<script>
+  setTimeout("location.href = 'logout.php';", 10000);
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
-<?php include("includes/headnav.php"); ?>
+<?php include("includes/headnavbad.php"); ?>
 <div class="container-fluid p-0">
   <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
     <div class="w-100">
-      <h1 class="mb-0">Game Hub</h1><br>
-      <p class="lead mb-5">Welcome to the Americollect Game Hub. Please login to access games.</p>
-      <p class="lead mb-5">**NOTICE: If you don't have any tokens, you will not be able to login!**</p>
+      <h1 style='text-align: center;'>You do not have any tokens!</h1><br>
+      <h4 style='text-align: center;'>You will be logged out in 10 seconds.<br><br><img src='img/thumbsdown.png' alt='thumbs up'>
     </div>
   </section>
 </div>
 <?php include("includes/scripts.php"); ?>
+
 </html>
